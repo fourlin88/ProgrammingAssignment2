@@ -3,12 +3,11 @@
 ## This fucnction requires one parameter x with object type as matrix. 
 ## 
 
-
 makeCacheMatrix <- function(x=matrix()) {
 tmpinv <- NULL
 set <- function(y) {
-x <<- y
-tmpinv <<- NULL
+   x <<- y
+   tmpinv <<- NULL
 }
 get <- function() x
 setinv <- function(solve) tmpinv <<- solve
@@ -27,8 +26,8 @@ getinv = getinv)
 cacheSolve <- function(x=matrix(), ...) {
 tmpinv <- x$getinv()
 if(!is.null(tmpinv)) {
-message("getting cached data")
-return(tmpinv)
+   message("getting cached data")
+   return(tmpinv)
 }
 data <- x$get()
 tmpinv <- solve(data, ...)

@@ -34,3 +34,19 @@ tmpinv <- solve(data, ...)
 x$setinv(tmpinv)
 tmpinv
 }
+
+###
+### This is how to test this program
+### For example: if we want to find the inverse of c = rbind(c(1, -1/4), c(-1/4, 1))
+### > c = rbind(c(1, -1/4), c(-1/4, 1))
+### Initialize the cache
+### a <- makeCacheMatrix()
+### fill the matrix
+### > a$set(c)
+### Solve this
+### y <- cacheSolve(a)
+### y is the inverse of c
+### Proof it
+### c%*%y
+### 
+

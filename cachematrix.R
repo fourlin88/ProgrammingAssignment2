@@ -1,7 +1,10 @@
+##
 ## This R program is a part of assignment 2
-## makeCacheMatrix is a function that creates and initializes the cache. 
+## Created by TL based on the skeleton provided in teh lecture. 
+## makeCacheMatrix is a function which creates a special "matrix" object that can cache its inverse. 
 ## This fucnction requires one parameter x with object type as matrix. 
 ## 
+
 
 makeCacheMatrix <- function(x=matrix()) {
 tmpinv <- NULL
@@ -18,7 +21,9 @@ getinv = getinv)
 }
 
 ##
-## cacheSolve is a function that calculates the inverse of a matrix.
+## cacheSolve is a function which computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+## If the inverse has already been calculated (and the matrix has not changed), 
+## then the cachesolve should retrieve the inverse from the cache.
 ## it requires two parameters, one is in the type of matrix and the other one is arbitrary
 ## this function is calling another built in matrix function solve()
 ## 
